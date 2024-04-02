@@ -1,0 +1,195 @@
+:root {
+    /* Primary Colors */
+    --veryDarkMagenta: hsl(300, 43%, 22%);
+    --softPink: hsl(333, 80%, 67%);
+
+    /* Neutral Colors */
+    --darkGrayishMagenta: hsl(303, 10%, 53%);
+    --lightGrayishMagenta: hsl(300, 24%, 96%);
+    --white: hsl(0, 0%, 100%);
+
+    /* Font */
+    --mainFont: "League Spartan", sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*,*::after,*::before {
+    box-sizing: inherit;
+}
+
+body {
+    font-size: 1.5rem;
+    font-family: var(--mainFont);
+    padding: 1rem;
+    min-height: 100vh;
+    background-image: url(../images/bg-pattern-top-mobile.svg), url(../images/bg-pattern-bottom-mobile.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-position: top left, bottom right;
+}
+@media (min-width: 76.8rem) {
+    body {
+        background-image: url(../images/bg-pattern-top-desktop.svg), url(../images/bg-pattern-bottom-desktop.svg);
+    }
+}
+
+/* Container */
+.container {
+    margin: 5rem auto;
+    max-width: 110rem;
+}
+
+/* Heading */
+.heading {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+}
+@media (min-width: 76.8rem) {
+    .heading {
+        flex-direction: row;
+        text-align: left;
+    }
+}
+
+.heading__content {
+    max-width: 45rem;
+}
+
+.heading__title {
+    margin-bottom: 0;
+    font-size: 3.8rem;
+    color: var(--veryDarkMagenta);
+}
+@media (min-width: 76.8rem) {
+    .heading__title {
+        font-size: 5.2rem;
+        padding-right: 2rem;
+    }
+}
+
+.heading__description {
+    font-size: 1.8rem;
+    line-height: 1.5;
+    color: var(--darkGrayishMagenta);
+}
+
+/* Rating Section */
+.rating__section {
+    width: 100%;
+}
+.rating-section__element {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem 4rem;
+    margin-top: 2rem;
+    border-radius: 1rem;
+    max-width: 100%;
+    background-color: var(--lightGrayishMagenta);
+}
+@media (min-width: 76.8rem) {
+    .rating-section__element {
+        flex-direction: row;
+        width: 45rem;
+        gap: 2.5rem;
+    }
+    .element1 {
+        margin-left: -10rem;
+    }
+    .element2 {
+        margin-left: -5rem;
+    }
+}
+
+.rating-section__icon {
+    margin-right: .5rem;
+}
+.rating-section__text {
+    color: var(--veryDarkMagenta);
+    font-weight: 700;
+    font-size: 1.7rem;
+    margin: 0;
+    margin-top: 1rem;
+}
+@media (min-width: 76.8rem) {
+    .rating-section__text {
+        margin-top: 0;
+    }
+}
+
+/* Card Section */
+.card-section {
+    margin-top: 5rem;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 2rem;
+    justify-content: center;
+}
+@media (min-width: 76.8rem) {
+    .card-section {
+        grid-template-rows: auto;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 3rem;
+    }
+    .card2 {
+        margin-top: 2rem;
+    }
+    .card3 {
+        margin-top: 4rem;
+    }
+}
+
+.card {
+    background-color: var(--veryDarkMagenta);
+    padding: 3rem;
+    color: var(--white);
+    border-radius: 1rem;
+    max-width: 40rem;
+}
+@media (min-width: 76.8rem) {
+    .card {
+        max-height: 24rem;
+    }
+}
+
+.card__description {
+    line-height: 1.5;
+    margin-bottom: 0;
+    font-size: 1.6rem;
+}
+
+/* Profile */
+.profile {
+    display: flex;
+    align-items: center;
+    column-gap: 2.5rem;
+}
+
+.profile__picture {
+    border-radius: 50%;
+    max-width: 4rem;
+}
+.profile__name {
+    margin-bottom: 0;
+    font-size: 1.7rem;
+}
+
+.profile__text {
+    margin-top: .5rem;
+    color: var(--softPink);
+    font-size: 1.7rem;
+}
+
+.attribution {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+  .attribution a {
+    color: hsl(228, 45%, 44%);
+  }
